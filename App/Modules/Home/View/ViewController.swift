@@ -44,7 +44,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celda", for: indexPath)
-//       let clima = self.viewModel?.getClima(at: indexPath.row)
+        let clima = self.viewModel?.getClima(at: indexPath.row)
 
         cell.textLabel?.text = "String((clima?.main.temp)!)"
         return cell
