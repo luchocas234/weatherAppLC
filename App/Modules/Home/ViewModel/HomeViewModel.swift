@@ -13,7 +13,7 @@ class HomeViewModel{
     // Referencia al delegate del viewcontroller
     private var delegate: HomeDelegate
     
-    // Array de pokemones en el contexto del viewmodel
+    // Array de Climas en el contexto del viewmodel
     var climaCiudades = [Weather]()
     
     //    private var climaActual = [WeatherLocal]()
@@ -45,12 +45,12 @@ class HomeViewModel{
         
     }
     
-    // Obtener un pokemon en especifico en base a su indice dentro del array
+    // Obtener un clima en especifico en base a su indice dentro del array
     func getClima(at index: Int) -> [Weather] {
         return climaCiudades
     }
     
-    // Obtener la cantidad de pokemones
+    // Obtener la cantidad
     func getClimasCount() -> Int {
         climaCiudades.count
     }
