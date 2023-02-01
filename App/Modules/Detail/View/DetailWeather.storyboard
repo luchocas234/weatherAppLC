@@ -137,9 +137,14 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfr-9X-AGq">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-8C-TKG">
+                                <rect key="frame" x="186" y="306" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.94117647059999998" green="0.38431372549999998" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,6 +162,7 @@
                         <outlet property="cityDetailLabel" destination="w3p-QV-jHd" id="WPx-jd-Oga"/>
                         <outlet property="detailTable" destination="yrW-Oc-XC6" id="oVm-er-hHZ"/>
                         <outlet property="imageDetail" destination="8G6-EE-KOO" id="g5e-VD-5VI"/>
+                        <outlet property="indicatorActv" destination="rcR-8C-TKG" id="3Vf-wF-aQn"/>
                         <outlet property="tempDetailActual" destination="ac1-ws-eUh" id="rH8-gI-Q6L"/>
                     </connections>
                 </viewController>

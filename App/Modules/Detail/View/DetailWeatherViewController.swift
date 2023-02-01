@@ -24,6 +24,7 @@ class DetailWeatherViewController: UIViewController {
     @IBOutlet weak var cityDetailLabel: UILabel!
     @IBOutlet weak var tempDetailActual: UILabel!
     
+    @IBOutlet weak var indicatorActv: UIActivityIndicatorView!
     @IBOutlet weak var detailTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,22 +33,10 @@ class DetailWeatherViewController: UIViewController {
         self.viewModel = DetailWeatherViewModel(delegate: self)
         let nameCity = climaActual!.name.replacingOccurrences(of: " ", with: "+")
         self.viewModel?.getClimaCiudades5days(city: nameCity)
-        
-//        print(climaActual,"detalle ",climaActual?.name,"nombre")
-//        print(clima5days?.city.name,"Detalle 5 days")
-        // Do any additional setup after loading the view.
+        indicatorActv.startAnimating()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 extension DetailWeatherViewController : DetailDelegate{
@@ -62,6 +51,8 @@ extension DetailWeatherViewController : DetailDelegate{
             self.cityDetailLabel.isHidden = false
             self.imageDetail.image = UIImage(named: self.climaActual!.weather[0].icon)
             self.detailTable.reloadData()
+            self.indicatorActv.stopAnimating()
+            self.indicatorActv.isHidden = true
         }
         
     }

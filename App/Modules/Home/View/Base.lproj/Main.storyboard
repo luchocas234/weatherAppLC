@@ -68,7 +68,7 @@
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Mfs-AH-ipP">
                                         <rect key="frame" x="163" y="107" width="37" height="37"/>
                                     </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-Vw-Q4i">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzd-Vw-Q4i">
                                         <rect key="frame" x="271" y="0.0" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
@@ -126,7 +126,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VZj-Dm-0Di" firstAttribute="top" secondItem="lgI-Xf-9XL" secondAttribute="bottom" constant="8" id="1e7-1f-YB8"/>
-                            <constraint firstItem="VZj-Dm-0Di" firstAttribute="top" secondItem="lgI-Xf-9XL" secondAttribute="bottom" symbolic="YES" id="1eT-8b-thz"/>
+                            <constraint firstItem="VZj-Dm-0Di" firstAttribute="top" secondItem="lgI-Xf-9XL" secondAttribute="bottom" constant="8" symbolic="YES" id="1eT-8b-thz"/>
                             <constraint firstItem="lgI-Xf-9XL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56t-Mb-aib"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VZj-Dm-0Di" secondAttribute="bottom" constant="27" id="5rf-gu-jKK"/>
                             <constraint firstItem="VZj-Dm-0Di" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="BZ1-RV-O6D"/>
@@ -146,6 +146,7 @@
                         <outlet property="labelMax" destination="0Rq-MM-dFW" id="mQE-0b-ltU"/>
                         <outlet property="labelMin" destination="DeF-Rg-qWa" id="pmY-cI-w9p"/>
                         <outlet property="tableView" destination="VZj-Dm-0Di" id="FMr-eq-Ffb"/>
+                        <outlet property="verMasBtn" destination="bzd-Vw-Q4i" id="xdb-Zd-YwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
