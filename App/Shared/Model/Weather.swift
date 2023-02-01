@@ -8,9 +8,14 @@
 import Foundation
 
 // MARK: - Weather
-struct Weather: Decodable {
+struct WeatherModel: Decodable {
     let main: Main
     let name : String
+    let weather: [Weather]
+//    let sys: Sys
+    let dt: Int
+    let timezone: Int?
+    let dt_txt: String?
 }
 
 // MARK: - Main
@@ -28,3 +33,16 @@ struct Main: Decodable {
     
     }
 }
+struct Weather: Codable {
+    let id: Int
+    let main: String
+    let description: String
+    let icon: String
+}
+//struct Sys: Codable {
+//    let country: String?
+//    let sunrise: Int?
+//    let sunset: Int?
+//}
+
+   
