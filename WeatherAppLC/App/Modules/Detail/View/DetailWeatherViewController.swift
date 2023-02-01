@@ -71,8 +71,6 @@ extension DetailWeatherViewController : UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath) as! WeatherTableViewCell
         
         guard let clima = self.viewModel?.getClima(at: indexPath.row) else{return cell}
@@ -83,14 +81,14 @@ extension DetailWeatherViewController : UITableViewDelegate, UITableViewDataSour
         
         let formatter = DateFormatter()
              formatter.dateFormat = "EEEE dd-MM HH:mm" //yyyy
-        let stringDate = formatter.string(from: Date(timeIntervalSince1970: TimeInterval(clima.dt ?? 0)))
+        let stringDate = formatter.string(from: Date(timeIntervalSince1970: TimeInterval(clima.dt )))
         
         cell.dateLabelCell.text = stringDate
         
         cell.minLabelCell.text = String(format: "%.0f", clima.main.tempMin - 273.15)+"° C"
         cell.maxLabelCell.text = String(format: "%.0f", clima.main.tempMax - 273.15)+"° C"
         
-        cell.imageCell.image = UIImage(named: clima.weather[0].icon ?? "default")
+        cell.imageCell.image = UIImage(named: clima.weather[0].icon )
         
         return cell
     }
