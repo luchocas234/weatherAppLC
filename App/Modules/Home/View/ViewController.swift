@@ -107,6 +107,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         storyboard.climaActual = clima
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let story = UIStoryboard(name: "DetailWeather", bundle: nil)
+        let storyboard = story.instantiateViewController(withIdentifier: "DetailWeather") as! DetailWeatherViewController
+//        guard let clima5days = self.viewModel?.getClima5daysIndex(at: indexPath.row) else{ return}
+//        storyboard.clima5days = clima5days
+        guard let clima = self.viewModel?.getClima(at: indexPath.row) else {return }
+        storyboard.climaActual = clima
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
     
 }
 
